@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Employee details </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let employee of employees">
+    <ion-card-content>
+      <ion-card-title>{{ employee.first_name }} {{ employee.last_name }}</ion-card-title>
+      <p>Email: {{ employee.email }}</p>
+    </ion-card-content>
+    <ion-buttons>
+      <ion-button >Edit</ion-button>
+      <ion-button color="danger" (click)="deleteEmployee(employee.id)">Delete</ion-button>
+    </ion-buttons>
+  </ion-card>
+</ion-content>

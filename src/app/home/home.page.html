@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-list-header>
+        Menu Options
+      </ion-list-header>
+
+      <ion-item (click)="goToCreateEmployee()">
+        <ion-icon name="person-add" slot="start"></ion-icon>
+        Create Employee
+      </ion-item>
+
+      <ion-item (click)="goToEmployeeDetails()">
+        <ion-icon name="people" slot="start"></ion-icon>
+        Employee Details
+      </ion-item>
+
+      <ion-item (click)="logout()">
+        <ion-icon name="log-out" slot="start"></ion-icon>
+        Logout
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-content id="main-content" class="ion-padding ion-text-center">
+  <div class="content-container">
+    <img src="assets/login.svg">
+  </div>
+</ion-content>
